@@ -8,6 +8,8 @@ const Navbar = () => {
         <NavbarItem icon="movie" />
         <NavbarItem icon="tv" />
         <NavbarItem icon="shape" />
+        <NavbarItem icon="bookmark" />
+        <NavbarItem icon="film" />
       </ul>
     </div>
   );
