@@ -11,8 +11,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="border w-full h-full p-4">
-        <h1 className="text-xl">Hello</h1>
+      <div className="w-full h-full p-4">
+        <div className="border h-full">
+          <h1>Hello</h1>
+        </div>
       </div>
     </div>
   );
