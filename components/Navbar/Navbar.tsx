@@ -5,8 +5,9 @@ const Navbar = () => {
   return (
     <div className="p-4">
       <ul className="menu menu-horizontal md:menu-vertical bg-accent p-2 rounded-box w-full h-full">
-        <NavbarItem />
-        <NavbarItem />
+        <NavbarItem icon="movie" />
+        <NavbarItem icon="tv" />
+        <NavbarItem icon="shape" />
       </ul>
     </div>
   );

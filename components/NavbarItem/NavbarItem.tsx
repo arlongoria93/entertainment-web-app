@@ -1,12 +1,37 @@
 import Image from "next/image";
-import React from "react";
-
-export default function NavbarItem() {
-  return (
-    <li>
-      <a>
-        <Image src="/icons/Movie.svg" width={24} height={24} />
-      </a>
-    </li>
-  );
+import Shape from "../../assests/icons/Shape.svg";
+import TV from "../../assests/icons/tv.svg";
+import Movie from "../../assests/icons/Movie.svg";
+interface Props {
+  icon: string;
 }
+export default function NavbarItem(props: Props) {
+  if (props.icon === "movie") {
+    return (
+      <li>
+        <a>
+          <Movie />
+        </a>
+      </li>
+    );
+  } else if (props.icon === "tv") {
+    return (
+      <li>
+        <a>
+          <TV fill="#5A698F" />
+        </a>
+      </li>
+    );
+  } else if (props.icon === "shape") {
+    return (
+      <li>
+        <a>
+          <Shape fill="#5A698F" />
+        </a>
+      </li>
+    );
+  }
+  return <div></div>;
+}
+
+import React from "react";
