@@ -9,10 +9,10 @@ const Navbar = () => {
           <NavbarItem icon="movie" />
         </div>
         <div className="navbar-center menu menu-horizontal">
-          <NavbarItem icon="tv" />
           <NavbarItem icon="shape" />
-          <NavbarItem icon="bookmark" />
           <NavbarItem icon="film" />
+          <NavbarItem icon="tv" />
+          <NavbarItem icon="bookmark" />
         </div>
 
         <div className="navbar-end">
