@@ -1,17 +1,32 @@
 import React from "react";
 import NavbarItem from "../NavbarItem/NavbarItem";
 
-const Navbar = () => {
+interface Props {
+  active: string
+}
+const Navbar = (props: Props) => {
   return (
     <div className="p-4 h-screen overflow-hidden">
       <ul className="md:h-full content-center navbar md:flex md:flex-col md:space-between items-center justify-between bg-accent p-2 rounded-box ">
         <div className="navbar-start md:flex md:flex-col space-y-8">
           <NavbarItem icon="movie" />
           <div className="navbar-center hidden md:inline-flex menu menu-horizontal md:menu-vertical">
-            <NavbarItem icon="shape" />
-            <NavbarItem icon="film" />
-            <NavbarItem icon="tv" />
-            <NavbarItem icon="bookmark" />
+            {props.active === 'home' ?
+              <NavbarItem icon="shape" active={true} /> :
+              <NavbarItem icon="shape" />
+            }
+            {props.active === 'movies' ?
+              <NavbarItem active={true} icon="film" /> :
+              <NavbarItem icon="film" />
+            }
+            {props.active === "shows" ?
+              <NavbarItem active={true} icon="tv" /> :
+              <NavbarItem icon="tv" />
+            }
+            {props.active === "bookmark" ?
+              <NavbarItem active={true} icon="bookmark" /> :
+              <NavbarItem icon="bookmark" />
+            }
           </div>
         </div>
 
