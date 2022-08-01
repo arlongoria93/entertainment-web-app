@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.0.10",
     "daisyui": "^2.20.0",
     "next": "12.2.3",
     "react": "18.2.0",
