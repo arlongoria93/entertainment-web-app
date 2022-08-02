@@ -5,11 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Trending from "../components/Trending/Trending";
 
-interface Movies {
-  title: string;
-}
-
-const Home: NextPage = (Movies) => {
+const Home: NextPage = () => {
   const [movies, setMovies] = useState(data);
   console.log(movies);
   return (
@@ -19,8 +15,8 @@ const Home: NextPage = (Movies) => {
         <div className="border h-full">
           {movies
             .filter((movie) => movie.isTrending)
-            .map((movie) => (
-              <Trending movie={movie} />
+            .map((movie, index) => (
+              <Trending movie={movie} key={index} />
             ))}
         </div>
       </div>
