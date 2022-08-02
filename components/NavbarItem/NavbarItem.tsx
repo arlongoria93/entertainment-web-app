@@ -3,10 +3,10 @@ import TV from "../../assests/icons/tv.svg";
 import Movie from "../../assests/icons/Movie.svg";
 import Bookmark from "../../assests/icons/Bookmark.svg";
 import Film from "../../assests/icons/film.svg";
-import Link from "next/link"
+import Link from "next/link";
 interface Props {
   icon: string;
-  active?: boolean
+  active?: boolean;
 }
 export default function NavbarItem(props: Props) {
   if (props.icon === "movie") {
@@ -27,7 +27,7 @@ export default function NavbarItem(props: Props) {
             <TV fill="#FFF" />
           </a>
         </li>
-      )
+      );
     }
     return (
       <li className="w-full items-center">
@@ -37,10 +37,8 @@ export default function NavbarItem(props: Props) {
           </a>
         </Link>
       </li>
-
     );
   } else if (props.icon === "shape") {
-
     if (props.active === true) {
       return (
         <li className="w-full items-center">
@@ -48,7 +46,7 @@ export default function NavbarItem(props: Props) {
             <Shape fill="#FFF" />
           </a>
         </li>
-      )
+      );
     }
     return (
       <li className="w-full items-center">
@@ -56,19 +54,18 @@ export default function NavbarItem(props: Props) {
           <a>
             <Shape fill="#5A698F" />
           </a>
-        </Link >
+        </Link>
       </li>
     );
   } else if (props.icon === "bookmark") {
     if (props.active) {
-
       return (
         <li className="w-full items-center">
           <a>
             <Bookmark fill="#FFF" />
           </a>
         </li>
-      )
+      );
     }
     return (
       <li className="w-full items-center">
@@ -82,13 +79,12 @@ export default function NavbarItem(props: Props) {
   } else if (props.icon === "film") {
     if (props.active == true) {
       return (
-
         <li className="w-full items-center">
           <a>
             <Film fill="#FFF" />
           </a>
         </li>
-      )
+      );
     }
     return (
       <li className="w-full items-center">

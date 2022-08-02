@@ -2,7 +2,7 @@ import React from "react";
 import NavbarItem from "../NavbarItem/NavbarItem";
 
 interface Props {
-  active: string
+  active: string;
 }
 const Navbar = (props: Props) => {
   return (
@@ -11,25 +11,28 @@ const Navbar = (props: Props) => {
         <div className="navbar-start md:flex md:flex-col space-y-8">
           <NavbarItem icon="movie" />
           <div className="navbar-center hidden md:inline-flex menu menu-horizontal md:menu-vertical">
-            {props.active === 'home' ?
-              <NavbarItem icon="shape" active={true} /> :
+            {props.active === "home" ? (
+              <NavbarItem icon="shape" active={true} />
+            ) : (
               <NavbarItem icon="shape" />
-            }
-            {props.active === 'movies' ?
-              <NavbarItem active={true} icon="film" /> :
+            )}
+            {props.active === "movies" ? (
+              <NavbarItem active={true} icon="film" />
+            ) : (
               <NavbarItem icon="film" />
-            }
-            {props.active === "shows" ?
-              <NavbarItem active={true} icon="tv" /> :
+            )}
+            {props.active === "shows" ? (
+              <NavbarItem active={true} icon="tv" />
+            ) : (
               <NavbarItem icon="tv" />
-            }
-            {props.active === "bookmark" ?
-              <NavbarItem active={true} icon="bookmark" /> :
+            )}
+            {props.active === "bookmark" ? (
+              <NavbarItem active={true} icon="bookmark" />
+            ) : (
               <NavbarItem icon="bookmark" />
-            }
+            )}
           </div>
         </div>
-
 
         <div className="md:hidden navbar-center menu menu-horizontal md:menu-vertical">
           <NavbarItem icon="shape" />
